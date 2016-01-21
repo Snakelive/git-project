@@ -28,3 +28,8 @@ git log -p -2
 #open our own editor:
 #git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multInst -notabbar - nosession -noPlugin"
 git commit
+
+#create new branch
+git checkout -b new_f #create and switch
+git branch new_f2 #just create
+git cheacout new_f #switch to merge

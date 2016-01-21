@@ -1,0 +1,26 @@
+#cancel of indexing
+git rm --cached FILE
+
+# -a all file which changed or odd put to index. File goes to index 
+# and then will change
+
+git commit -a -m "message for commit"
+
+#back up file
+git checkout -- file
+
+#watch was. q - for some problems
+#git help log - open browser. Much variants
+git log
+
+# %h - short hash commit, $an - name, $ar -> git help
+git log --pretty=format:"%h - %an, %ar : %s"
+
+#for long projects -> want since 2 weeks changes
+git log --since=2.weeks
+
+#last commit and 2 last changes commits
+git log -p -2
+
+#without comment - open editor, exit x
+git commit

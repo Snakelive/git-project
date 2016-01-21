@@ -1,0 +1,53 @@
+[33mcommit ae148f36bb090403d64221a30ccd85bb85cb3a79[m
+Author: Ilya Sname <Ilya_hr2@mail.ru>
+Date:   Thu Jan 21 15:48:05 2016 +0300
+
+    mes
+
+[1mdiff --git a/docs/Gruntfile.js b/docs/Gruntfile.js[m
+[1mindex 1e204ad..23d3524 100644[m
+[1m--- a/docs/Gruntfile.js[m
+[1m+++ b/docs/Gruntfile.js[m
+[36m@@ -1,20 +1,8 @@[m
+ module.exports = function( grunt ) {[m
+ 	"use strict";[m
+ [m
+[31m-	function readOptionalJSON( filepath ) {[m
+[31m-		var data = {};[m
+[31m-		try {[m
+[31m-			data = JSON.parse( stripJSONComments([m
+[31m-				fs.readFileSync( filepath, { encoding: "utf8" } )[m
+[31m-			) );[m
+[31m-		} catch ( e ) {}[m
+[31m-		return data;[m
+[31m-	}[m
+ [m
+[31m-	var fs = require( "fs" ),[m
+[31m-		stripJSONComments = require( "strip-json-comments" ),[m
+[31m-		gzip = require( "gzip-js" ),[m
+[31m-		srcHintOptions = readOptionalJSON( "src/.jshintrc" ),[m
+[32m+[m	[32mions = readOptionalJSON( "src/.jshintrc" ),[m
+ 		newNode = !/^v0/.test( process.version ),[m
+ [m
+ 		// Allow to skip jsdom-related tests in Node.js < 1.0.0[m
+
+[33mcommit 0f01524e94ced0fe29a60689291beff07702a10b[m
+Author: Ilya Sname <Ilya_hr2@mail.ru>
+Date:   Thu Jan 21 15:30:48 2016 +0300
+
+    init
+
+[1mdiff --git a/commands.txt b/commands.txt[m
+[1mdeleted file mode 100644[m
+[1mindex 81e59cc..0000000[m
+[1m--- a/commands.txt[m
+[1m+++ /dev/null[m
+[36m@@ -1,7 +0,0 @@[m
+[31m-#cancel add[m
+[31m-git rm --cached FILE[m
+[31m-[m
+[31m-# -a all file which changed or odd put to index. File goes to index [m
+[31m-# and then will change[m
+[31m-[m
+[31m-git commit -a -m "message for commit"[m
+\ No newline at end of file[m

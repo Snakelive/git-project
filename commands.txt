@@ -63,3 +63,10 @@ git push -u origin master
 #watch all reposits
 git remote
 git remote -v #fetch (where we get) and push (where we put)
+
+#set push for branches
+#Full mathcing
+git config --global push.default matching
+
+#Current branch
+git config --global push.default simple

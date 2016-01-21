@@ -32,4 +32,16 @@ git commit
 #create new branch
 git checkout -b new_f #create and switch
 git branch new_f2 #just create
-git cheacout new_f #switch to merge
+git checkout new_f #switch to merge
+
+#change tool for check merge conflicts
+git config --global merge.tool kdiff3
+
+#merge master branch to new_f
+git merge master
+
+#if conflicts exist
+git mergetool
+
+#install and set merge tool
+git config --global mergetool.kdiff3.cmd '"D:\Programs\KDiff3\kdiff3" $BASE $LOCAL $REMOTE -o $MERGED'

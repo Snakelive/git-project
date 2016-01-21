@@ -1,5 +1,8 @@
 #config file -> users -> User -> .gitconfig
 
+#help
+git help <command>
+
 #cancel of indexing
 git rm --cached FILE
 
@@ -45,3 +48,18 @@ git mergetool
 
 #install and set merge tool
 git config --global mergetool.kdiff3.cmd '"D:\Programs\KDiff3\kdiff3" $BASE $LOCAL $REMOTE -o $MERGED'
+
+#push to repository
+# remote add = "we talk to git that we add new repository now."
+# origin = "short title of reposit. We can use default"
+# Link to rep.
+git remote add origin https://github.com/Snakelive/git-project.git
+
+#push our local commits to repository
+#we push to repository with key -u for that repository next will be as default
+#we use alias "origin" for this repository
+git push -u origin master
+
+#watch all reposits
+git remote
+git remote -v #fetch (where we get) and push (where we put)

@@ -1,3 +1,5 @@
+#config file -> users -> User -> .gitconfig
+
 #cancel of indexing
 git rm --cached FILE
 
@@ -22,5 +24,7 @@ git log --since=2.weeks
 #last commit and 2 last changes commits
 git log -p -2
 
-#without comment - open editor, exit x
+#without comment - open editor, exit - escape, : , x 
+#open our own editor:
+#git config --global core.editor "'C:\Program Files (x86)\Notepad++\notepad++.exe' -multInst -notabbar - nosession -noPlugin"
 git commit

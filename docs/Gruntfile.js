@@ -2,45 +2,7 @@ module.exports = function( grunt ) {
 	"use strict";
 
 
-	ions = readOptionalJSON( "src/.jshintrc" ),
-		newNode = !/^v0/.test( process.version ),
-
-		// Allow to skip jsdom-related tests in Node.js < 1.0.0
-		runJsdomTests = newNode || ( function() {
-			try {
-				require( "jsdom" );
-				return true;
-			} catch ( e ) {
-				return false;
-			}
-		} )();
-
-	// The concatenated file won't pass onevar
-	// But our modules can
-	delete srcHintOptions.onevar;
-
-	if ( !grunt.option( "filename" ) ) {
-		grunt.option( "filename", "jquery.js" );
-	}
-
-	grunt.initConfig( {
-		pkg: grunt.file.readJSON( "package.json" ),
-		dst: readOptionalJSON( "dist/.destination.json" ),
-		"compare_size": {
-			files: [ "dist/jquery.js", "dist/jquery.min.js" ],
-			options: {
-				compress: {
-					gz: function( contents ) {
-						return gzip.zip( contents, {} ).length;
-					}
-				},
-				cache: "build/.sizecache.json"
-			}
-		},
-		babel: {
-			options: {
-				sourceMap: "inline",
-				retainLines: true
+	ions = 
 			},
 			nodeSmokeTests: {
 				files: {

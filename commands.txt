@@ -1,0 +1,7 @@
+#cancel add
+git rm --cached FILE
+
+# -a all file which changed or odd put to index. File goes to index 
+# and then will change
+
+git commit -a -m "message for commit"

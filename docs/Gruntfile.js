@@ -1,20 +1,8 @@
 module.exports = function( grunt ) {
 	"use strict";
 
-	function readOptionalJSON( filepath ) {
-		var data = {};
-		try {
-			data = JSON.parse( stripJSONComments(
-				fs.readFileSync( filepath, { encoding: "utf8" } )
-			) );
-		} catch ( e ) {}
-		return data;
-	}
 
-	var fs = require( "fs" ),
-		stripJSONComments = require( "strip-json-comments" ),
-		gzip = require( "gzip-js" ),
-		srcHintOptions = readOptionalJSON( "src/.jshintrc" ),
+	ions = readOptionalJSON( "src/.jshintrc" ),
 		newNode = !/^v0/.test( process.version ),
 
 		// Allow to skip jsdom-related tests in Node.js < 1.0.0
